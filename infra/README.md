@@ -22,9 +22,9 @@ In order to run the script, you will need to modify the `main.params.json` file 
 
 | Parameter | Description | Notes |
 | :-        | :-          | :-           |
-| `primaryRegion` | Primary region of the application | |
-| `secondaryRegion` | Secondary region of the application | |
-| `cosmosdbFailoverRegion` | A failover region for cosmos db | |
+| `primaryRegion` | Primary region of the application | Must be fully qualified (e.g., "East US 2"). |
+| `secondaryRegion` | Secondary region of the application | Again, must be fully qualified. |
+| `cosmosdbFailoverRegion` | A failover region for cosmos db | Again, must be fully qualified. |
 | `domainPrimaryDomain` | TLD domain name (e.g., contoso.com) | This must be an unregistered domain name. Check with GoDaddy or another service to make sure the domain is available before attempting to run this. |
 | `domainPrimaryEmail` | Primary contact's email address for domain registration | This must be a non-Microsoft email address.|
 | `domainPrimaryFirstName` | Primary contact's first name for domain registration | |

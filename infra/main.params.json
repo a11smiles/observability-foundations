@@ -3,49 +3,49 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "primaryRegion": {
-      "value": "East US 2"
+      "value": ""
     },
     "secondaryRegion": {
-      "value": "Central US"
+      "value": ""
     },
     "cosmosdbFailoverRegion": {
-      "value": "South Central US"
+      "value": ""
     },
     "domainPrimaryDomain": {
-      "value": "grafana-foo.com"
+      "value": ""
     },
     "domainPrimaryEmail": {
-      "value": "me@jdav.is"
+      "value": ""
     },
     "domainPrimaryFirstName": {
-      "value": "Joshua"
+      "value": ""
     },
     "domainPrimaryLastName": {
-      "value": "Davis"
+      "value": ""
     },
     "domainPrimaryPhone": {
-      "value": "+1.7706588562"
+      "value": ""
     },
     "domainPrimaryAddress1": {
-        "value": "100 Main St"
+        "value": ""
     },
     "domainPrimaryAddress2": {
         "value": ""
     },
     "domainPrimaryCity": {
-        "value": "Cumming"
+        "value": ""
     },
     "domainPrimaryCountry": {
-        "value": "US"
+        "value": ""
     },
     "domainPrimaryPostalCode": {
-        "value": "30041"
+        "value": ""
     },
     "domainPrimaryState": {
-        "value": "GA"
+        "value": ""
     },
     "myIPAddress": {
-        "value": "107.138.107.106"
+        "value": ""
     }
   }
 }
