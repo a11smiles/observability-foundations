@@ -1,0 +1,2037 @@
+{
+    "panels": [
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "#EAB839",
+                  "value": 0.1
+                },
+                {
+                  "color": "red",
+                  "value": 0.35
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 8,
+          "x": 0,
+          "y": 0
+        },
+        "id": 4,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": false
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Average"
+              ],
+              "aggregation": "Average",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                3600000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [],
+              "dimensions": [
+                {
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "text": "ConnectionMode",
+                  "value": "ConnectionMode"
+                },
+                {
+                  "text": "OperationType",
+                  "value": "OperationType"
+                },
+                {
+                  "text": "PublicAPIType",
+                  "value": "PublicAPIType"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "ServerSideLatency",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4375",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4376",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Server Side Latency (Avg)",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 0,
+            "thresholds": {
+              "mode": "percentage",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                },
+                {
+                  "color": "#EAB839",
+                  "value": 90
+                }
+              ]
+            },
+            "unit": "percent"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 8,
+          "x": 8,
+          "y": 0
+        },
+        "id": 6,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": false
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Minimum",
+                "Average",
+                "Maximum"
+              ],
+              "aggregation": "Average",
+              "allowedTimeGrainsMs": [
+                3600000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [],
+              "dimensions": [],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "ServiceAvailability",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4429",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4430",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Service Availability",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 8,
+          "x": 16,
+          "y": 0
+        },
+        "id": 2,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": false
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Count"
+              ],
+              "aggregation": "Count",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [],
+              "dimensions": [
+                {
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "text": "StatusCode",
+                  "value": "StatusCode"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "MetadataRequests",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4289",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4290",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4291",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4292",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:4293",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:4294",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4295",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:4296",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:4297",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Metadata Requests",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 3,
+          "x": 0,
+          "y": 8
+        },
+        "id": 8,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "text": {},
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.4.1",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Maximum"
+              ],
+              "aggregation": "Maximum",
+              "allowedTimeGrainsMs": [
+                300000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [],
+              "dimensions": [
+                {
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "ProvisionedThroughput",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4531",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4532",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Provisioned RU/s",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "decimals": 0,
+            "mappings": [],
+            "max": 100,
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "#EAB839",
+                  "value": 60
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 3,
+          "x": 3,
+          "y": 8
+        },
+        "id": 23,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "text": {},
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.4.1",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Maximum",
+                "Average"
+              ],
+              "aggregation": "Maximum",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                3600000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [],
+              "dimensions": [
+                {
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "text": "PartitionKeyRangeId",
+                  "value": "PartitionKeyRangeId"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "NormalizedRUConsumption",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4657",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4658",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4659",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4660",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4661",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "RU Consumption",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "line+area"
+              }
+            },
+            "decimals": 0,
+            "mappings": [],
+            "max": 100,
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "transparent",
+                  "value": null
+                },
+                {
+                  "color": "orange",
+                  "value": 60
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "percent"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 9,
+          "x": 6,
+          "y": 8
+        },
+        "id": 10,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": false
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Maximum",
+                "Average"
+              ],
+              "aggregation": "Maximum",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                3600000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [],
+              "dimensions": [
+                {
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "text": "PartitionKeyRangeId",
+                  "value": "PartitionKeyRangeId"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "NormalizedRUConsumption",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4657",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4658",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4659",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4660",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4661",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "RU Consumption",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "purple",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 3,
+          "x": 15,
+          "y": 8
+        },
+        "id": 18,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "text": {},
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.4.1",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Total",
+                "Average"
+              ],
+              "aggregation": "Total",
+              "allowedTimeGrainsMs": [
+                300000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:5017",
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "$$hashKey": "object:5018",
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "$$hashKey": "object:5019",
+                  "text": "Region",
+                  "value": "Region"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "DocumentCount",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:5013",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:5014",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Document Count",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 3,
+          "x": 18,
+          "y": 8
+        },
+        "id": 22,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "text": {},
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.4.1",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Total",
+                "Average"
+              ],
+              "aggregation": "Total",
+              "allowedTimeGrainsMs": [
+                300000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:5132",
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "$$hashKey": "object:5133",
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "$$hashKey": "object:5134",
+                  "text": "Region",
+                  "value": "Region"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "DataUsage",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:5128",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:5129",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Data Usage",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "decimals": 0,
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "red",
+                  "value": null
+                },
+                {
+                  "color": "yellow",
+                  "value": 10
+                },
+                {
+                  "color": "green",
+                  "value": 20
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 3,
+          "x": 21,
+          "y": 8
+        },
+        "id": 20,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "text": {},
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.4.1",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Total",
+                "Average"
+              ],
+              "aggregation": "Total",
+              "allowedTimeGrainsMs": [
+                300000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [],
+              "dimensions": [
+                {
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "text": "Region",
+                  "value": "Region"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "AvailableStorage",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:5073",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:5074",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Available Storage",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "decimals": 0,
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Total Requests query"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "query"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Total Requests read"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "read"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 8,
+          "x": 0,
+          "y": 16
+        },
+        "id": 14,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Count"
+              ],
+              "aggregation": "Count",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [
+                {
+                  "dimension": "OperationType",
+                  "filters": [],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:4813",
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "$$hashKey": "object:4814",
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "$$hashKey": "object:4815",
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "$$hashKey": "object:4816",
+                  "text": "StatusCode",
+                  "value": "StatusCode"
+                },
+                {
+                  "$$hashKey": "object:4817",
+                  "text": "OperationType",
+                  "value": "OperationType"
+                },
+                {
+                  "$$hashKey": "object:4818",
+                  "text": "Status",
+                  "value": "Status"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "TotalRequests",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4802",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4803",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4804",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4805",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:4806",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:4807",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4808",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:4809",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:4810",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Total Requests",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "decimals": 0,
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Total Request Units query"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "query"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Total Request Units read"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "read"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 8,
+          "x": 8,
+          "y": 16
+        },
+        "id": 12,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Total",
+                "Average"
+              ],
+              "aggregation": "Total",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [
+                {
+                  "dimension": "OperationType",
+                  "filters": [],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:4743",
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "$$hashKey": "object:4744",
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "$$hashKey": "object:4745",
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "$$hashKey": "object:4746",
+                  "text": "StatusCode",
+                  "value": "StatusCode"
+                },
+                {
+                  "$$hashKey": "object:4747",
+                  "text": "OperationType",
+                  "value": "OperationType"
+                },
+                {
+                  "$$hashKey": "object:4748",
+                  "text": "Status",
+                  "value": "Status"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "TotalRequestUnits",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4732",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4733",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4734",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4735",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:4736",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:4737",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4738",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:4739",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:4740",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Total Request Units",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "decimals": 0,
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 8,
+          "x": 16,
+          "y": 16
+        },
+        "id": 16,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Count"
+              ],
+              "aggregation": "Count",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [
+                {
+                  "dimension": "StatusCode",
+                  "filters": [],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:4885",
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "$$hashKey": "object:4886",
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "$$hashKey": "object:4887",
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "$$hashKey": "object:4888",
+                  "text": "StatusCode",
+                  "value": "StatusCode"
+                },
+                {
+                  "$$hashKey": "object:4889",
+                  "text": "OperationType",
+                  "value": "OperationType"
+                },
+                {
+                  "$$hashKey": "object:4890",
+                  "text": "Status",
+                  "value": "Status"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "TotalRequests",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4874",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4875",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4876",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4877",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:4878",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:4879",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4880",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:4881",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:4882",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Request Status Codes",
+        "transformations": [
+          {
+            "id": "renameByRegex",
+            "options": {
+              "regex": "Total Requests (.*)",
+              "renamePattern": "$1"
+            }
+          }
+        ],
+        "type": "timeseries"
+      }
+    ]
+  }

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "primaryRegion": {
+      "value": "East US 2"
+    },
+    "secondaryRegion": {
+      "value": "Central US"
+    },
+    "cosmosdbFailoverRegion": {
+      "value": "South Central US"
+    },
+    "domainPrimaryDomain": {
+      "value": "grafana-foo.com"
+    },
+    "domainPrimaryEmail": {
+      "value": "me@jdav.is"
+    },
+    "domainPrimaryFirstName": {
+      "value": "Joshua"
+    },
+    "domainPrimaryLastName": {
+      "value": "Davis"
+    },
+    "domainPrimaryPhone": {
+      "value": "+1.7706588562"
+    },
+    "domainPrimaryAddress1": {
+        "value": "100 Main St"
+    },
+    "domainPrimaryAddress2": {
+        "value": ""
+    },
+    "domainPrimaryCity": {
+        "value": "Cumming"
+    },
+    "domainPrimaryCountry": {
+        "value": "US"
+    },
+    "domainPrimaryPostalCode": {
+        "value": "30041"
+    },
+    "domainPrimaryState": {
+        "value": "GA"
+    },
+    "myIPAddress": {
+        "value": "107.138.107.106"
+    }
+  }
+}

@@ -1,33 +1,47 @@
-# Project
+# Observability Foundations
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repo contains artifacts that are intended to enable Microsoft CSAs and partners to have initial conversations regarding observability of their Azure workloads. Within this repo exists a demo application, sample Grafana dashboards, and a k6 script for load testing the application. Please read the respective deployment guides.
 
-As the maintainer of this project, please make a few updates:
+## Content
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+There are four primary artifacts within this repo. Each artifact has its own configuration/deployment guide. I've attempted to be as detailed as possible with intention to simplify deployments and have you up and running quickly. Below is the basic outline of procedures.
+
+### Prerequisites
+
+In order to deploy the demo and use the include artifacts, you will need the following.
+
+1. [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
+2. Latest version of Azure Bicep (execute `az bicep upgrade` after the Azure CLI has been installed)
+3. [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+4. [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+5. [Grafana](https://grafana.com/auth/sign-up/create-user)
+6. [k6 Runtime](https://k6.io/docs/get-started/installation/)
+7. PowerPoint (to view the PPT)
+
+### Source and Deployment
+
+The locations and deployment guides are listed below. You will need to deploy  the artifacts (if necessary) in the following order.
+<!-- markdownlint-disable-next-line MD036 -->
+**Total time required: 1-2 hours**
+
+| Artifact | Folder | Deployment Guide | Time Required  |
+| :-       | :-     | :-               | -:            |
+| PowerPoint Deck (no deployment) | [./assets](./assets) | [Observability-Foundations.ppt](./assets/Observability-Foundations.ppt) |
+| Azure Infrastructure | [./infra](./infra) | [README.md](./infra/README.md) | 20-30 minutes
+| ToDo App | [./app](./app) | [README.md](./app/README.md) | 20-30 minutes
+| Grafana Dashboards | [./dashboards](./dashboards) | [README.md](./dashboards/README.md) | 30-45 minutes |
+| k6 Script | [./k6](./k6) | [README.md](./k6/README.md) | 10-15 minutes |
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+This project, while made available on GitHub as Open Source, limits community contributions. It is maintained by [a11smiles](https://github.com/a11smiles) as a resource for Microsoft CSAs and partners to use for delivering conversations regarding observability with Azure Monitor and Grafana. While you may wish to contribute, not all PRs will be honored. Please discuss prior to spending effort. You may wish to consider opening an Issue instead.
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+## Warranty
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+There is no warranty, written or implied, or official support for the artifacts contained herein. Use at your own discretion.
 
 ## Trademarks
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.

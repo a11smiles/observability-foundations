@@ -1,0 +1,625 @@
+{
+    "panels": [
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Queries by Endpoint Returned grafana-demo-east"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "east"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Queries by Endpoint Returned grafana-demo-west"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "west"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "id": 2,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "AppRequests                                                             \n| where TimeGenerated >= $__timeFrom() and TimeGenerated <= $__timeTo()\n\r| where Url !contains \"trafficmanager.net\" \n| summarize count() by AppRoleName, bin(TimeGenerated, 1m) \n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "None",
+                "Average",
+                "Minimum",
+                "Maximum",
+                "Total",
+                "Count"
+              ],
+              "aggregation": "Total",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [
+                {
+                  "dimension": "EndpointName",
+                  "filters": [],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:188",
+                  "text": "Endpoint Name",
+                  "value": "EndpointName"
+                }
+              ],
+              "metricDefinition": "Microsoft.Network/trafficmanagerprofiles",
+              "metricName": "QpsByEndpoint",
+              "metricNamespace": "microsoft.network/trafficmanagerprofiles",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:177",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:178",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:179",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:180",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:181",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:182",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:183",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:184",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:185",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Queries by Endpoint Returned",
+        "transformations": [],
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "decimals": 0,
+            "mappings": [
+              {
+                "options": {
+                  "0": {
+                    "text": "Down"
+                  },
+                  "1": {
+                    "text": "Up"
+                  }
+                },
+                "type": "value"
+              }
+            ],
+            "max": 1,
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "red",
+                  "value": null
+                },
+                {
+                  "color": "green",
+                  "value": 1
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Endpoint Status by Endpoint perfeff-demo-central"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "central"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 3,
+          "x": 12,
+          "y": 0
+        },
+        "id": 3,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "text": {},
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.4.1",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "AppRequests                                                             \n| where TimeGenerated >= $__timeFrom() and TimeGenerated <= $__timeTo()\n\r| where Url !contains \"trafficmanager.net\" \n| summarize count() by AppRoleName, bin(TimeGenerated, 1m) \n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "None",
+                "Average",
+                "Minimum",
+                "Maximum",
+                "Total",
+                "Count"
+              ],
+              "aggregation": "Maximum",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [
+                {
+                  "dimension": "EndpointName",
+                  "filters": [
+                    "grafana-demo-east"
+                  ],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:337",
+                  "text": "Endpoint Name",
+                  "value": "EndpointName"
+                }
+              ],
+              "metricDefinition": "Microsoft.Network/trafficmanagerprofiles",
+              "metricName": "ProbeAgentCurrentEndpointStateByProfileResourceId",
+              "metricNamespace": "microsoft.network/trafficmanagerprofiles",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:328",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:329",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:330",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:331",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:332",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:333",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:334",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:335",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:336",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Status (east)",
+        "transformations": [],
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "grafana-azure-monitor-datasource",
+          "uid": "qRVwV904z"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "decimals": 0,
+            "mappings": [
+              {
+                "options": {
+                  "0": {
+                    "text": "Down"
+                  },
+                  "1": {
+                    "text": "Up"
+                  }
+                },
+                "type": "value"
+              }
+            ],
+            "max": 1,
+            "min": 0,
+            "noValue": "0",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "red",
+                  "value": null
+                },
+                {
+                  "color": "green",
+                  "value": 1
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Endpoint Status by Endpoint perfeff-demo-east2"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "east2"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 3,
+          "x": 15,
+          "y": 0
+        },
+        "id": 4,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "text": {},
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.4.1",
+        "targets": [
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "AppRequests                                                             \n| where TimeGenerated >= $__timeFrom() and TimeGenerated <= $__timeTo()\n\r| where Url !contains \"trafficmanager.net\" \n| summarize count() by AppRoleName, bin(TimeGenerated, 1m) \n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "None",
+                "Average",
+                "Minimum",
+                "Maximum",
+                "Total",
+                "Count"
+              ],
+              "aggregation": "Maximum",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilter": "*",
+              "dimensionFilters": [
+                {
+                  "dimension": "EndpointName",
+                  "filters": [
+                    "grafana-demo-west"
+                  ],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:337",
+                  "text": "Endpoint Name",
+                  "value": "EndpointName"
+                }
+              ],
+              "metricDefinition": "Microsoft.Network/trafficmanagerprofiles",
+              "metricName": "ProbeAgentCurrentEndpointStateByProfileResourceId",
+              "metricNamespace": "microsoft.network/trafficmanagerprofiles",
+              "resourceGroup": "grafana-demo",
+              "resourceName": "grafana-demo",
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:328",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:329",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:330",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:331",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:332",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:333",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:334",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:335",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:336",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "qRVwV904z"
+            },
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "A",
+            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+          }
+        ],
+        "title": "Status (west)",
+        "transformations": [],
+        "type": "stat"
+      }
+    ]
+  }
