@@ -114,6 +114,7 @@ resource primaryAppServerAutoscale 'Microsoft.Insights/autoscalesettings@2022-10
       }
     ]
     notifications: []
+    enabled: true
     targetResourceLocation: primaryRegion
     targetResourceUri: primaryAppServer.id
   }
@@ -384,6 +385,7 @@ resource secondaryAppServerAutoscale 'Microsoft.Insights/autoscalesettings@2022-
       }
     ]
     notifications: []
+    enabled: true
     targetResourceLocation: secondaryRegion
     targetResourceUri: secondaryAppServer.id
   }
@@ -575,6 +577,12 @@ output primaryAppSiteName string = primaryAppSite.name
 @description('FQDN of primary web site')
 output primaryAppSiteFqdn string = primaryAppSite.properties.defaultHostName
 
+@description('Name of primary app insights')
+output primaryAppInsightsName string = primaryAppInsights.name
+
+@description('Name of primary managed certificate')
+output primaryManagedCertName string = primaryAppServerHostCert.name
+
 @description('Name of secondary web server')
 output secondaryAppServerName string = secondaryAppServer.name
 
@@ -586,3 +594,9 @@ output secondaryAppSiteName string = secondaryAppSite.name
 
 @description('FQDN of secondary web site')
 output secondaryAppSiteFqdn string = secondaryAppSite.properties.defaultHostName
+
+@description('Name of secondary app insights')
+output secondaryAppInsightsName string = secondaryAppInsights.name
+
+@description('Name of secondary managed certificate')
+output secondaryManagedCertName string = secondaryAppServerHostCert.name

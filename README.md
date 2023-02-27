@@ -29,7 +29,7 @@ The locations and deployment guides are listed below. You will need to deploy  t
 | PowerPoint Deck (no deployment) | [./assets](./assets) | (under development) | -- |
 | Azure Infrastructure | [./infra](./infra) | [README.md](./infra/README.md) | 20-30 minutes
 | ToDo App | [./app](./app) | [README.md](./app/README.md) | 20-30 minutes
-| Grafana Dashboards | [./dashboards](./dashboards) | (under development) | 30-45 minutes |
+| Grafana Dashboards | [./dashboards](./dashboards) | [README.md](./dashboards/README.md) | 45-60 minutes |
 | k6 Script | [./k6](./k6) | (under development) | 10-15 minutes |
 
 ## Contributing

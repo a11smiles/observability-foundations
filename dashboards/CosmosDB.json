@@ -3,7 +3,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -136,8 +136,8 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "ServerSideLatency",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resourceGroup": "{resourceGroupName}",
+              "resourceName": "{cosmosdbName}",
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -155,7 +155,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -163,7 +163,7 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Server Side Latency (Avg)",
@@ -172,7 +172,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -281,8 +281,8 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "ServiceAvailability",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resourceGroup": "{resourceGroupName}",
+              "resourceName": "{cosmosdbName}",
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -300,7 +300,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -308,7 +308,7 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Service Availability",
@@ -317,7 +317,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -438,8 +438,8 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "MetadataRequests",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resourceGroup": "{resourceGroupName}",
+              "resourceName": "{cosmosdbName}",
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -492,7 +492,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -500,7 +500,7 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Metadata Requests",
@@ -509,7 +509,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -588,8 +588,8 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "ProvisionedThroughput",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resourceGroup": "{resourceGroupName}",
+              "resourceName": "{cosmosdbName}",
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -607,7 +607,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -615,7 +615,7 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Provisioned RU/s",
@@ -624,7 +624,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -725,8 +725,8 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "NormalizedRUConsumption",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resourceGroup": "{resourceGroupName}",
+              "resourceName": "{cosmosdbName}",
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -759,7 +759,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -767,7 +767,7 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "RU Consumption",
@@ -776,7 +776,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -905,8 +905,8 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "NormalizedRUConsumption",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resourceGroup": "{resourceGroupName}",
+              "resourceName": "{cosmosdbName}",
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -939,7 +939,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -947,7 +947,7 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "RU Consumption",
@@ -956,7 +956,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -1042,8 +1042,8 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "DocumentCount",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resourceGroup": "{resourceGroupName}",
+              "resourceName": "{cosmosdbName}",
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -1061,7 +1061,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -1069,7 +1069,7 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Document Count",
@@ -1078,7 +1078,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -1164,8 +1164,8 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "DataUsage",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resourceGroup": "{resourceGroupName}",
+              "resourceName": "{cosmosdbName}",
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -1183,7 +1183,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -1191,7 +1191,7 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Data Usage",
@@ -1200,7 +1200,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "description": "",
         "fieldConfig": {
@@ -1293,8 +1293,8 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "AvailableStorage",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resourceGroup": "{resourceGroupName}",
+              "resourceName": "{cosmosdbName}",
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -1312,7 +1312,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -1320,7 +1320,7 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Available Storage",
@@ -1329,7 +1329,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -1379,32 +1379,7 @@
             },
             "unit": "short"
           },
-          "overrides": [
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "Total Requests query"
-              },
-              "properties": [
-                {
-                  "id": "displayName",
-                  "value": "query"
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "Total Requests read"
-              },
-              "properties": [
-                {
-                  "id": "displayName",
-                  "value": "read"
-                }
-              ]
-            }
-          ]
+          "overrides": []
         },
         "gridPos": {
           "h": 8,
@@ -1443,6 +1418,7 @@
                 "Count"
               ],
               "aggregation": "Count",
+              "alias": "Read",
               "allowedTimeGrainsMs": [
                 60000,
                 300000,
@@ -1453,11 +1429,12 @@
                 43200000,
                 86400000
               ],
-              "dimensionFilter": "*",
               "dimensionFilters": [
                 {
                   "dimension": "OperationType",
-                  "filters": [],
+                  "filters": [
+                    "Read"
+                  ],
                   "operator": "eq"
                 }
               ],
@@ -1496,8 +1473,12 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "TotalRequests",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resources": [
+                {
+                  "resourceGroup": "{resourceGroupName}",
+                  "resourceName": "{cosmosdbName}"
+                }
+              ],
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -1550,7 +1531,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -1558,7 +1539,91 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
+          },
+          {
+            "azureMonitor": {
+              "aggregation": "Count",
+              "alias": "Query",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilters": [
+                {
+                  "dimension": "OperationType",
+                  "filters": [
+                    "Query"
+                  ],
+                  "operator": "eq"
+                }
+              ],
+              "metricName": "TotalRequests",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resources": [
+                {
+                  "resourceGroup": "{resourceGroupName}",
+                  "resourceName": "{cosmosdbName}"
+                }
+              ],
+              "timeGrain": "auto"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "{grafanaDataSourceId}"
+            },
+            "hide": false,
+            "queryType": "Azure Monitor",
+            "refId": "B",
+            "subscription": "{subscriptionId}"
+          },
+          {
+            "azureMonitor": {
+              "aggregation": "Count",
+              "alias": "ReadFeed",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilters": [
+                {
+                  "dimension": "OperationType",
+                  "filters": [
+                    "ReadFeed"
+                  ],
+                  "operator": "eq"
+                }
+              ],
+              "metricName": "TotalRequests",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resources": [
+                {
+                  "resourceGroup": "{resourceGroupName}",
+                  "resourceName": "{cosmosdbName}"
+                }
+              ],
+              "timeGrain": "auto"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "{grafanaDataSourceId}"
+            },
+            "hide": false,
+            "queryType": "Azure Monitor",
+            "refId": "C",
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Total Requests",
@@ -1567,7 +1632,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -1621,32 +1686,7 @@
             },
             "unit": "short"
           },
-          "overrides": [
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "Total Request Units query"
-              },
-              "properties": [
-                {
-                  "id": "displayName",
-                  "value": "query"
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "Total Request Units read"
-              },
-              "properties": [
-                {
-                  "id": "displayName",
-                  "value": "read"
-                }
-              ]
-            }
-          ]
+          "overrides": []
         },
         "gridPos": {
           "h": 8,
@@ -1686,6 +1726,7 @@
                 "Average"
               ],
               "aggregation": "Total",
+              "alias": "Read",
               "allowedTimeGrainsMs": [
                 60000,
                 300000,
@@ -1696,11 +1737,12 @@
                 43200000,
                 86400000
               ],
-              "dimensionFilter": "*",
               "dimensionFilters": [
                 {
                   "dimension": "OperationType",
-                  "filters": [],
+                  "filters": [
+                    "Read"
+                  ],
                   "operator": "eq"
                 }
               ],
@@ -1739,8 +1781,12 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "TotalRequestUnits",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resources": [
+                {
+                  "resourceGroup": "{resourceGroupName}",
+                  "resourceName": "{cosmosdbName}"
+                }
+              ],
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -1793,7 +1839,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -1801,7 +1847,289 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
+          },
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Total",
+                "Average"
+              ],
+              "aggregation": "Total",
+              "alias": "Query",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilters": [
+                {
+                  "dimension": "OperationType",
+                  "filters": [
+                    "Query"
+                  ],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:4743",
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "$$hashKey": "object:4744",
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "$$hashKey": "object:4745",
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "$$hashKey": "object:4746",
+                  "text": "StatusCode",
+                  "value": "StatusCode"
+                },
+                {
+                  "$$hashKey": "object:4747",
+                  "text": "OperationType",
+                  "value": "OperationType"
+                },
+                {
+                  "$$hashKey": "object:4748",
+                  "text": "Status",
+                  "value": "Status"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "TotalRequestUnits",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resources": [
+                {
+                  "resourceGroup": "{resourceGroupName}",
+                  "resourceName": "{cosmosdbName}"
+                }
+              ],
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4732",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4733",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4734",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4735",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:4736",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:4737",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4738",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:4739",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:4740",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "{grafanaDataSourceId}"
+            },
+            "hide": false,
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "B",
+            "subscription": "{subscriptionId}"
+          },
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Total",
+                "Average"
+              ],
+              "aggregation": "Total",
+              "alias": "ReadFeed",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilters": [
+                {
+                  "dimension": "OperationType",
+                  "filters": [
+                    "ReadFeed"
+                  ],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:4743",
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "$$hashKey": "object:4744",
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "$$hashKey": "object:4745",
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "$$hashKey": "object:4746",
+                  "text": "StatusCode",
+                  "value": "StatusCode"
+                },
+                {
+                  "$$hashKey": "object:4747",
+                  "text": "OperationType",
+                  "value": "OperationType"
+                },
+                {
+                  "$$hashKey": "object:4748",
+                  "text": "Status",
+                  "value": "Status"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "TotalRequestUnits",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resources": [
+                {
+                  "resourceGroup": "{resourceGroupName}",
+                  "resourceName": "{cosmosdbName}"
+                }
+              ],
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4732",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4733",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4734",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4735",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:4736",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:4737",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4738",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:4739",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:4740",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "{grafanaDataSourceId}"
+            },
+            "hide": false,
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "C",
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Total Request Units",
@@ -1810,7 +2138,7 @@
       {
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
-          "uid": "qRVwV904z"
+          "uid": "{grafanaDataSourceId}"
         },
         "fieldConfig": {
           "defaults": {
@@ -1903,6 +2231,7 @@
                 "Count"
               ],
               "aggregation": "Count",
+              "alias": "200",
               "allowedTimeGrainsMs": [
                 60000,
                 300000,
@@ -1913,11 +2242,12 @@
                 43200000,
                 86400000
               ],
-              "dimensionFilter": "*",
               "dimensionFilters": [
                 {
                   "dimension": "StatusCode",
-                  "filters": [],
+                  "filters": [
+                    "200"
+                  ],
                   "operator": "eq"
                 }
               ],
@@ -1956,8 +2286,12 @@
               "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
               "metricName": "TotalRequests",
               "metricNamespace": "microsoft.documentdb/databaseaccounts",
-              "resourceGroup": "grafana-demo",
-              "resourceName": "grafana-demo",
+              "resources": [
+                {
+                  "resourceGroup": "{resourceGroupName}",
+                  "resourceName": "{cosmosdbName}"
+                }
+              ],
               "timeGrain": "auto",
               "timeGrains": [
                 {
@@ -2010,7 +2344,7 @@
             },
             "datasource": {
               "type": "grafana-azure-monitor-datasource",
-              "uid": "qRVwV904z"
+              "uid": "{grafanaDataSourceId}"
             },
             "insightsAnalytics": {
               "query": "",
@@ -2018,7 +2352,7 @@
             },
             "queryType": "Azure Monitor",
             "refId": "A",
-            "subscription": "e4639bdf-32e8-4091-b6a4-d71975636e01"
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Request Status Codes",
