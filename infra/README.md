@@ -114,7 +114,7 @@ You have now successfully deployed the infrastructure. You are ready to build an
 <!-- markdownlint-disable MD033 -->
 <div style="display:flex;flex-direction:row;justify-content:space-between;padding-top:30px;">
   <style>
-    button {
+    .button {
       color: #ffffff;
       background-color: #2d63c8;
       font-size: 19px;
@@ -123,16 +123,16 @@ You have now successfully deployed the infrastructure. You are ready to build an
       padding: 8px 20px;
       cursor: pointer;
     }
-    button.disabled {
+    .button.disabled {
       background-color:#ccc;
       color: #999;
       cursor: default;
     }
-    button:not(.disabled):hover {
+    .button:not(.disabled):hover {
       color: #2d63c8;
       background-color: #ffffff;
     }
   </style>
-  <button type="button" class="disabled">Previous</button>
-  <button type="button" onclick="window.location.href='https://github.com/Azure/observability-foundations/blob/main/app/README.md'">Next</button>
+  <div class="button disabled" type="button">Previous</div>
+  <div class="button" onclick="window.location.href='https://github.com/Azure/observability-foundations/blob/main/app/README.md'">Next</div>
 </div>
