@@ -133,6 +133,6 @@ You have now successfully deployed the infrastructure. You are ready to build an
       background-color: #ffffff !important;
     }
   </style>
-  <a class="button disabled" type="button">Previous</a>
+  <a style="font-size:19px;border: 1px solid #2d63c8;border-radius:3px;padding:8px 20px;background-color:#ccc;color:#999;cursor:default;" type="button">Previous</a>
   <a class="button" href="../app/README.md">Next</a>
 </div>
