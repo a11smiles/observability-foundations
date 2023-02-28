@@ -69,4 +69,4 @@ One thing to note is that, in order to mimic the mouse clicks of an actual user,
 <kbd><br />&nbsp; [Previous][PrevLink] &nbsp;<br /><br /></kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <kbd><br />&nbsp;&nbsp;&nbsp; Next &nbsp;&nbsp;&nbsp;<br /><br /></kbd>
 
-[PrevLink]: ../grafana/README.md
+[PrevLink]: ../dashboards/README.md
