@@ -115,7 +115,7 @@ You have now successfully deployed the infrastructure. You are ready to build an
 <br />
 <hr />
 
-<kbd align="left"><font size="4"><br />&nbsp; Previous &nbsp;<br /><br /></font></kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<kbd align="right"><font size="4"><br />&nbsp;&nbsp;&nbsp; [Next][NextLink] &nbsp;&nbsp;&nbsp;<br /><br /></font></kbd>
+<kbd><sup><br />&nbsp; Previous &nbsp;<br /><br /></sup></kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<kbd><sup><br />&nbsp;&nbsp;&nbsp; [Next][NextLink] &nbsp;&nbsp;&nbsp;<br /><br /></sup></kbd>
 
 [NextLink]: # '../app/README.md'
