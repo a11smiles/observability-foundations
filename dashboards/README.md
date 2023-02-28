@@ -200,3 +200,13 @@ Whew! You've made it! You've now completed the build and deployment of the dashb
 For your remaining two dashboards, you'll need to hover over the quadrant icon (Dashboards) on the left menu and click on _+ Import_. From there, follow steps 4-6 above for your Cosmos DB and Traffic Manager dashboards. Make sure you follow all instructions _carefully_.
 
 After you've deployed all three dashboards, you are ready to monitor your ToDo app in realtime. Congratulations!
+
+<!-- markdownlint-disable MD033 MD042-->
+<br />
+<hr />
+
+<kbd><br />&nbsp; [Previous][PrevLink] &nbsp;<br /><br /></kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<kbd><br />&nbsp;&nbsp;&nbsp; [Next][NextLink] &nbsp;&nbsp;&nbsp;<br /><br /></kbd>
+
+[PrevLink]: # '../app/README.md'
+[NextLink]: # '../k6/README.md'

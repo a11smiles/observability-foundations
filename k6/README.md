@@ -61,3 +61,12 @@ One thing worth noting, if none of our tests encounter failed requests, k6 will 
 The last section (`export default function() {...}`) of our demo script is the main entry point for k6 execution. k6 calls this function to execute our tests, and it is from this function that we call our individual test suites.
 
 One thing to note is that, in order to mimic the mouse clicks of an actual user, we `sleep()` 1 second before each test. Again, this mimics the navigation of a user on our site _and_ reduces the potential false positive of a DDoS attack against our system under test.
+
+<!-- markdownlint-disable MD033 MD042-->
+<br />
+<hr />
+
+<kbd><br />&nbsp; [Previous][PrevLink] &nbsp;<br /><br /></kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<kbd><br />&nbsp;&nbsp;&nbsp; Next &nbsp;&nbsp;&nbsp;<br /><br /></kbd>
+
+[PrevLink]: # '../grafana/README.md'

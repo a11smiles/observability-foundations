@@ -85,3 +85,13 @@ You'll be prompted to enter your password, and it may take a minute or two to up
 Congratulations! If you've followed the instructions for deploying the infrastructure and the application, you should be able to interact with you application by visiting your app's `<trafficManagerUri>`.
 
 You are now ready to configure the Grafana dashboards.
+
+<!-- markdownlint-disable MD033 MD042-->
+<br />
+<hr />
+
+<kbd><br />&nbsp; [Previous][PrevLink] &nbsp;<br /><br /></kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<kbd><br />&nbsp;&nbsp;&nbsp; [Next][NextLink] &nbsp;&nbsp;&nbsp;<br /><br /></kbd>
+
+[PrevLink]: # '../infra/README.md'
+[NextLink]: # '../dashboards/README.md'
