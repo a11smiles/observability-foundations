@@ -111,28 +111,9 @@ Make sure you keep the information handy. Either open another command prompt or 
 
 You have now successfully deployed the infrastructure. You are ready to build and deploy the application.
 
-<!-- markdownlint-disable MD033 -->
-<div style="display:flex;flex-direction:row;justify-content:space-between;padding-top:30px;">
-  <style>
-    .button {
-      color: #ffffff !important;
-      background-color: #2d63c8 !important;
-      font-size: 19px;
-      border: 1px solid #2d63c8;
-      border-radius: 3px;
-      padding: 8px 20px;
-      cursor: pointer;
-    }
-    .button.disabled {
-      background-color:#ccc !important;
-      color: #999 !important;
-      cursor: default;
-    }
-    .button:not(.disabled):hover {
-      color: #2d63c8 !important;
-      background-color: #ffffff !important;
-    }
-  </style>
-  <a style="font-size:19px;border: 1px solid #2d63c8;border-radius:3px;padding:8px 20px;background-color:#ccc;color:#999;cursor:default;" type="button">Previous</a>
-  <a class="button" href="../app/README.md">Next</a>
-</div>
+<!-- markdownlint-disable MD033 MD042-->
+<kbd><br /> [Prev][PrevLink] <br /> </kbd>
+<kbd><br /> [Next][NextLink] <br /> </kbd>
+
+[PrevLink]: # '#'
+[NextLink]: # '../app/README.md'
