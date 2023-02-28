@@ -29,18 +29,24 @@ In order to run the script, you will need to modify the `main.params.json` file 
 | `domainPrimaryEmail` | Primary contact's email address for domain registration | This must be a non-Microsoft email address.|
 | `domainPrimaryFirstName` | Primary contact's first name for domain registration | |
 | `domainPrimaryLastName` | Primary contact's last name for domain registration | |
-| `domainPrimaryPhone` | Primary contact's phone number for domain registration | The format should be +#.##########, where the first number is your country code and the last numbers (after the period) are the remainder of your number, including area code (ex. +1.5556667777). |
+| `domainPrimaryPhone` | Primary contact's phone number for domain registration | The format should be +#.##########, where the first number is your country code and the last numbers (after the period) are the remainder of your number, including area code (ex. +1.5556667777).<br /><br />The country code can be one to three numbers. |
 | `domainPrimaryAddress1` | Primary contact's address line 1 | |
 | `domainPrimaryAddress2` | Primary contact's address line 2, if needed | If this isn't needed, you can leave the field empty. |
 | `domainPrimaryCity` | Primary contact's address city | |
-| `domainPrimaryCountry` | Primary contact's address country abbreviation (e.g., US) | |
+| `domainPrimaryCountry` | Primary contact's address country abbreviation (e.g., US) | Must be in two-letter format. |
 | `domainPrimaryPostalCode` | Primary contact's address postal code | |
-| `domainPrimaryState` | Primary contact's address state/region abbreviation (e.g., WA) | |
-| `myIPAddress` | Your _public_ IP address | This is used for domain registration consent. To find your IP address, go to [Get-MyIP](https://www.get-myip.com/) and copy the IPv4 address from the top of the page.
+| `domainPrimaryState` | Primary contact's address state/region (e.g., WA, San Jose, etc.) | |
+| `myIPAddress` | Your _public_ IP address | This is used for domain registration consent. To find your IP address, go to [WhatIsMyIP](https://www.whatismyip.com/ and copy the IPv4 address from the top of the page.
 
 Once you've updated the parameters file and saved it, you are ready to deploy the infrastructure to Azure.
 
 ## Step 2: Deploy Bicep
+
+> **NOTES:**  
+>
+> 1. Given occasional race conditions with ARM, you may need to run this script more than once for everything to pass.  
+> 2. Microsoft sponsored account may not allow App Service Domains, or there is a limit. You may need to request a limit increase.
+> 3. Cosmos DB may limit your failover region due to resource constraints. If Azure throws an error, update your failover domain and rerun the scripts.
 
 1. In the Azure portal, create a resource group to hold you application.
 2. Open a prompt and login to your Azure subscription using `az login`.
