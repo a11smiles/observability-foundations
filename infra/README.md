@@ -112,8 +112,10 @@ Make sure you keep the information handy. Either open another command prompt or 
 You have now successfully deployed the infrastructure. You are ready to build and deploy the application.
 
 <!-- markdownlint-disable MD033 MD042-->
-<kbd><br /> [Prev][PrevLink] <br /> </kbd>
-<kbd><br /> [Next][NextLink] <br /> </kbd>
+<br />
+<hr />
 
-[PrevLink]: # '#'
+<kbd align="left"><font size="4"><br />&nbsp; Previous &nbsp;<br /><br /></font></kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<kbd align="right"><font size="4"><br />&nbsp;&nbsp;&nbsp; [Next][NextLink] &nbsp;&nbsp;&nbsp;<br /><br /></font></kbd>
+
 [NextLink]: # '../app/README.md'
