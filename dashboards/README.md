@@ -149,8 +149,8 @@ Refer to the tables in each subsection to ensure you've replaced all variables i
 
 ### CosmosDB.json ([Original](https://raw.githubusercontent.com/Azure/observability-foundations/main/dashboards/CosmosDB.json))
 
-| Variable | Value | Notes |
-| :-       | :-    | :-    |
+| Variable | Notes |
+| :-       | :-    |
 | `{grafanaDataSourceId}`| The Grafana data source Id from step 9 in the previous section. | |
 | `{resourceGroupName}` | |
 | `{subscriptionId}` ||
