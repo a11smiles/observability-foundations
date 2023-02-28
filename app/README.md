@@ -93,5 +93,5 @@ You are now ready to configure the Grafana dashboards.
 <kbd><br />&nbsp; [Previous][PrevLink] &nbsp;<br /><br /></kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <kbd><br />&nbsp;&nbsp;&nbsp; [Next][NextLink] &nbsp;&nbsp;&nbsp;<br /><br /></kbd>
 
-[PrevLink]: # '../infra/README.md'
-[NextLink]: # '../dashboards/README.md'
+[PrevLink]: ../infra/README.md
+[NextLink]: ../dashboards/README.md

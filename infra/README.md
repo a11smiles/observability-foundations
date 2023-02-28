@@ -118,4 +118,4 @@ You have now successfully deployed the infrastructure. You are ready to build an
 <kbd><br />&nbsp; Previous &nbsp;<br /><br /></kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <kbd><br />&nbsp;&nbsp;&nbsp; [Next][NextLink] &nbsp;&nbsp;&nbsp;<br /><br /></kbd>
 
-[NextLink]: # '../app/README.md'
+[NextLink]: ../app/README.md

@@ -208,5 +208,5 @@ After you've deployed all three dashboards, you are ready to monitor your ToDo a
 <kbd><br />&nbsp; [Previous][PrevLink] &nbsp;<br /><br /></kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <kbd><br />&nbsp;&nbsp;&nbsp; [Next][NextLink] &nbsp;&nbsp;&nbsp;<br /><br /></kbd>
 
-[PrevLink]: # '../app/README.md'
-[NextLink]: # '../k6/README.md'
+[PrevLink]: ../app/README.md
+[NextLink]: ../k6/README.md
