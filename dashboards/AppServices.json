@@ -414,7 +414,7 @@
             "timeGrain": "auto"
           },
           "azureLogAnalytics": {
-            "query": "AppExceptions \n| where TimeGenerated >= $__timeFrom() and TimeGenerated <= $__timeTo()\n| extend errorMessage = InnermostMessage\n| summarize count() by errorMessage, AppRoleName \n| order by count_",
+            "query": "AppExceptions \n| where TimeGenerated >= $__timeFrom() and TimeGenerated <= $__timeTo()\n| extend outerMessageStr = replace_string(OuterMessage, \"\\r\\n\", \"\")\n| extend Error = case(outerMessageStr contains \"Errors\", extract(\"\\\\\\\"Errors\\\\\\\": \\\\[( )*\\\\\\\"(.+)\\\\\\\"\", 2, outerMessageStr), outerMessageStr )\n| summarize count() by Error, AppRoleName \n| order by count_",
             "resource": "{logAnalyticsWorkspaceId}",
             "resultFormat": "table"
           },
@@ -4192,6 +4192,7 @@
               "color": {
                 "mode": "thresholds"
               },
+              "decimals": 0,
               "mappings": [],
               "thresholds": {
                 "mode": "absolute",

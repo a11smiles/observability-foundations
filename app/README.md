@@ -27,10 +27,11 @@ This command will download all dependencies (make take a minute), then build a r
 The previous step was pretty simple. This section will be slightly more involved as you will need to prepare your environment&mdash;local and remote&mdash;for deploying the application you just built.
 
 1. From the command or shell prompt, enter into the `/app/bin/Release/net6.0/publish` folder.
-2. Type the following commands:  
+2. Type the following commands (the second line ensures compatibility across platforms):  
 
    ```bash
    git init
+   git branch -m master
    git add .
    git commit -m "First commit"
    ```

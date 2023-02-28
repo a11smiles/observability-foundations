@@ -6,6 +6,8 @@ This repo contains artifacts that are intended to enable Microsoft CSAs and part
 
 There are four primary artifacts within this repo. Each artifact has its own configuration/deployment guide. I've attempted to be as detailed as possible with intention to simplify deployments and have you up and running quickly. Below is the basic outline of procedures.
 
+> **NOTE:** Once you have Git installed, you should clone this repository to your local machine. Otherwise, [download](https://github.com/Azure/observability-foundations/archive/refs/heads/main.zip) the zip file and extract it on your local machine. **DO NOT ATTEMPT TO RUN THIS IN THE PORTAL's CLI.**
+
 ### Prerequisites
 
 In order to deploy the demo and use the include artifacts, you will need the following.
@@ -30,7 +32,7 @@ The locations and deployment guides are listed below. You will need to deploy  t
 | Azure Infrastructure | [./infra](./infra) | [README.md](./infra/README.md) | 20-30 minutes
 | ToDo App | [./app](./app) | [README.md](./app/README.md) | 20-30 minutes
 | Grafana Dashboards | [./dashboards](./dashboards) | [README.md](./dashboards/README.md) | 45-60 minutes |
-| k6 Script | [./k6](./k6) | (under development) | 10-15 minutes |
+| k6 Script | [./k6](./k6) | [README.md](./k6/README.md) | 10-15 minutes |
 
 ## Contributing
 

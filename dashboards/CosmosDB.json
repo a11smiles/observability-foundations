@@ -2353,18 +2353,429 @@
             "queryType": "Azure Monitor",
             "refId": "A",
             "subscription": "{subscriptionId}"
+          },
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Count"
+              ],
+              "aggregation": "Count",
+              "alias": "201",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilters": [
+                {
+                  "dimension": "StatusCode",
+                  "filters": [
+                    "201"
+                  ],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:4885",
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "$$hashKey": "object:4886",
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "$$hashKey": "object:4887",
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "$$hashKey": "object:4888",
+                  "text": "StatusCode",
+                  "value": "StatusCode"
+                },
+                {
+                  "$$hashKey": "object:4889",
+                  "text": "OperationType",
+                  "value": "OperationType"
+                },
+                {
+                  "$$hashKey": "object:4890",
+                  "text": "Status",
+                  "value": "Status"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "TotalRequests",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resources": [
+                {
+                  "resourceGroup": "{resourceGroupName}",
+                  "resourceName": "{cosmosdbName}"
+                }
+              ],
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4874",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4875",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4876",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4877",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:4878",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:4879",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4880",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:4881",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:4882",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "{grafanaDataSourceId}"
+            },
+            "hide": false,
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "B",
+            "subscription": "{subscriptionId}"
+          },
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Count"
+              ],
+              "aggregation": "Count",
+              "alias": "204",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilters": [
+                {
+                  "dimension": "StatusCode",
+                  "filters": [
+                    "204"
+                  ],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:4885",
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "$$hashKey": "object:4886",
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "$$hashKey": "object:4887",
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "$$hashKey": "object:4888",
+                  "text": "StatusCode",
+                  "value": "StatusCode"
+                },
+                {
+                  "$$hashKey": "object:4889",
+                  "text": "OperationType",
+                  "value": "OperationType"
+                },
+                {
+                  "$$hashKey": "object:4890",
+                  "text": "Status",
+                  "value": "Status"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "TotalRequests",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resources": [
+                {
+                  "resourceGroup": "{resourceGroupName}",
+                  "resourceName": "{cosmosdbName}"
+                }
+              ],
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4874",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4875",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4876",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4877",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:4878",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:4879",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4880",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:4881",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:4882",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "{grafanaDataSourceId}"
+            },
+            "hide": false,
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "C",
+            "subscription": "{subscriptionId}"
+          },
+          {
+            "appInsights": {
+              "dimension": [],
+              "metricName": "select",
+              "timeGrain": "auto"
+            },
+            "azureLogAnalytics": {
+              "query": "//change this example to create your own time series query\n<table name>                                                              //the table to query (e.g. Usage, Heartbeat, Perf)\n| where $__timeFilter(TimeGenerated)                                      //this is a macro used to show the full chart’s time range, choose the datetime column here\n| summarize count() by <group by column>, bin(TimeGenerated, $__interval) //change “group by column” to a column in your table, such as “Computer”. The $__interval macro is used to auto-select the time grain. Can also use 1h, 5m etc.\n| order by TimeGenerated asc",
+              "resultFormat": "time_series",
+              "workspace": "12b6fe80-92dd-4d2a-97bb-045b580210ed"
+            },
+            "azureMonitor": {
+              "aggOptions": [
+                "Count"
+              ],
+              "aggregation": "Count",
+              "alias": "429",
+              "allowedTimeGrainsMs": [
+                60000,
+                300000,
+                900000,
+                1800000,
+                3600000,
+                21600000,
+                43200000,
+                86400000
+              ],
+              "dimensionFilters": [
+                {
+                  "dimension": "StatusCode",
+                  "filters": [
+                    "429"
+                  ],
+                  "operator": "eq"
+                }
+              ],
+              "dimensions": [
+                {
+                  "$$hashKey": "object:4885",
+                  "text": "DatabaseName",
+                  "value": "DatabaseName"
+                },
+                {
+                  "$$hashKey": "object:4886",
+                  "text": "CollectionName",
+                  "value": "CollectionName"
+                },
+                {
+                  "$$hashKey": "object:4887",
+                  "text": "Region",
+                  "value": "Region"
+                },
+                {
+                  "$$hashKey": "object:4888",
+                  "text": "StatusCode",
+                  "value": "StatusCode"
+                },
+                {
+                  "$$hashKey": "object:4889",
+                  "text": "OperationType",
+                  "value": "OperationType"
+                },
+                {
+                  "$$hashKey": "object:4890",
+                  "text": "Status",
+                  "value": "Status"
+                }
+              ],
+              "metricDefinition": "Microsoft.DocumentDb/databaseAccounts",
+              "metricName": "TotalRequests",
+              "metricNamespace": "microsoft.documentdb/databaseaccounts",
+              "resources": [
+                {
+                  "resourceGroup": "{resourceGroupName}",
+                  "resourceName": "{cosmosdbName}"
+                }
+              ],
+              "timeGrain": "auto",
+              "timeGrains": [
+                {
+                  "$$hashKey": "object:4874",
+                  "text": "auto",
+                  "value": "auto"
+                },
+                {
+                  "$$hashKey": "object:4875",
+                  "text": "1 minute",
+                  "value": "PT1M"
+                },
+                {
+                  "$$hashKey": "object:4876",
+                  "text": "5 minutes",
+                  "value": "PT5M"
+                },
+                {
+                  "$$hashKey": "object:4877",
+                  "text": "15 minutes",
+                  "value": "PT15M"
+                },
+                {
+                  "$$hashKey": "object:4878",
+                  "text": "30 minutes",
+                  "value": "PT30M"
+                },
+                {
+                  "$$hashKey": "object:4879",
+                  "text": "1 hour",
+                  "value": "PT1H"
+                },
+                {
+                  "$$hashKey": "object:4880",
+                  "text": "6 hours",
+                  "value": "PT6H"
+                },
+                {
+                  "$$hashKey": "object:4881",
+                  "text": "12 hours",
+                  "value": "PT12H"
+                },
+                {
+                  "$$hashKey": "object:4882",
+                  "text": "1 day",
+                  "value": "P1D"
+                }
+              ],
+              "top": "10"
+            },
+            "datasource": {
+              "type": "grafana-azure-monitor-datasource",
+              "uid": "{grafanaDataSourceId}"
+            },
+            "hide": false,
+            "insightsAnalytics": {
+              "query": "",
+              "resultFormat": "time_series"
+            },
+            "queryType": "Azure Monitor",
+            "refId": "D",
+            "subscription": "{subscriptionId}"
           }
         ],
         "title": "Request Status Codes",
-        "transformations": [
-          {
-            "id": "renameByRegex",
-            "options": {
-              "regex": "Total Requests (.*)",
-              "renamePattern": "$1"
-            }
-          }
-        ],
         "type": "timeseries"
       }
     ]
