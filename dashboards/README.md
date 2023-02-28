@@ -30,6 +30,8 @@ From a prompt, enter the following command.
 
 > **NOTE:** Replace _\<managedUserName\>_ with a tenant-level unique username (e.g., grafana-_yourAlias_). Replace _\<subscriptionId\>_ with the `subscriptionId` value from deploying the infrastructure.
 
+> **NOTE:** If you receive the error `Unable to create service principal with azure cli from git bash shell: InvalidSchema: No connection adapters were found for 'C:/Program Files/Git/...`, this is due to a bug in the shell environment within Windows. Switch to PowerShell and run the following commands.
+
 ```bash
 az ad sp create-for-rbac --name <managedUserName> --role reader --scopes /subscriptions/<subscriptionId>
 ```

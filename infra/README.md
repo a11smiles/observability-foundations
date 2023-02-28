@@ -110,3 +110,29 @@ az webapp deployment source config-local-git -g grafana-demo -n grafana-demo-pri
 Make sure you keep the information handy. Either open another command prompt or copy-paste the information to a temporary document (e.g., VS Code, Notepad, Word, etc.).
 
 You have now successfully deployed the infrastructure. You are ready to build and deploy the application.
+
+<!-- markdownlint-disable MD033 -->
+<div style="display:flex;flex-direction:row;justify-content:space-between;padding-top:30px;">
+  <style>
+    button {
+      color: #ffffff;
+      background-color: #2d63c8;
+      font-size: 19px;
+      border: 1px solid #2d63c8;
+      border-radius: 3px;
+      padding: 8px 20px;
+      cursor: pointer;
+    }
+    button.disabled {
+      background-color:#ccc;
+      color: #999;
+      cursor: default;
+    }
+    button:not(.disabled):hover {
+      color: #2d63c8;
+      background-color: #ffffff;
+    }
+  </style>
+  <button type="button" class="disabled">Previous</button>
+  <button type="button" onclick="window.location.href='https://github.com/Azure/observability-foundations/blob/main/app/README.md'">Next</button>
+</div>
