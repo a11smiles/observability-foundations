@@ -146,6 +146,7 @@ Refer to the tables in each subsection to ensure you've replaced all variables i
 | `{secondaryAppServerAutoscaleName}` ||
 | `{secondaryAppInsightsName}` ||
 | `{secondaryManagedCertName}` ||
+
 ### CosmosDB.json ([Original](https://raw.githubusercontent.com/Azure/observability-foundations/main/dashboards/CosmosDB.json))
 
 | Variable | Value | Notes |
