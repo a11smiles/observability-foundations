@@ -115,8 +115,8 @@ You have now successfully deployed the infrastructure. You are ready to build an
 <div style="display:flex;flex-direction:row;justify-content:space-between;padding-top:30px;">
   <style>
     .button {
-      color: #ffffff;
-      background-color: #2d63c8;
+      color: #ffffff !important;
+      background-color: #2d63c8 !important;
       font-size: 19px;
       border: 1px solid #2d63c8;
       border-radius: 3px;
@@ -124,15 +124,15 @@ You have now successfully deployed the infrastructure. You are ready to build an
       cursor: pointer;
     }
     .button.disabled {
-      background-color:#ccc;
-      color: #999;
+      background-color:#ccc !important;
+      color: #999 !important;
       cursor: default;
     }
     .button:not(.disabled):hover {
-      color: #2d63c8;
-      background-color: #ffffff;
+      color: #2d63c8 !important;
+      background-color: #ffffff !important;
     }
   </style>
-  <div class="button disabled" type="button">Previous</div>
-  <div class="button" onclick="window.location.href='https://github.com/Azure/observability-foundations/blob/main/app/README.md'">Next</div>
+  <a class="button disabled" type="button">Previous</a>
+  <a class="button" href="../app/README.md">Next</a>
 </div>
