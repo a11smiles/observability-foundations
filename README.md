@@ -28,7 +28,8 @@ The locations and deployment guides are listed below. You will need to deploy  t
 
 | Artifact | Folder | Deployment Guide | Time Required  |
 | :-       | :-     | :-               | -:            |
-| PowerPoint Deck (no deployment) | [./assets](./assets) | (under development) | -- |
+| PowerPoint Deck (no deployment) | [./assets](./assets) | [observability-fundamentals.ppt](./assets/observability-fundamentals.pptx) | -- |
+| Presentation Guide (no deployment) | [./assets](./assets) | [observability-fundamentals.docx](./assets/observability-fundamentals.docx) | -- |
 | Azure Infrastructure | [./infra](./infra) | [README.md](./infra/README.md) | 20-30 minutes
 | ToDo App | [./app](./app) | [README.md](./app/README.md) | 20-30 minutes
 | Grafana Dashboards | [./dashboards](./dashboards) | [README.md](./dashboards/README.md) | 45-60 minutes |

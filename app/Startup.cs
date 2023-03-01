@@ -38,7 +38,7 @@
                     new ExceptionHandlerOptions()
                     {
                         AllowStatusCode404Response = true,
-                        ExceptionHandlingPath = "Home/Error"                  
+                        ExceptionHandlingPath = "/Home/Error"                  
                     }
                 ); 
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
@@ -66,6 +66,8 @@
         /// <returns></returns>
         private static async Task<CosmosDbService> InitializeCosmosClientInstanceAsync(IConfigurationSection configurationSection)
         {
+
+            
             string databaseName = configurationSection.GetSection("DatabaseName").Value;
             string containerName = configurationSection.GetSection("ContainerName").Value;
             string account = configurationSection.GetSection("Account").Value;
