@@ -2,7 +2,7 @@ import http from "k6/http";
 import { sleep, check, group } from "k6";
 import { Rate, Trend } from "k6/metrics";
 
-const endPoint = "https://{trafficManagerUri}/"
+const endPoint = "https://{trafficManagerUri}/";
 
 //
 // Setup custom metrics
