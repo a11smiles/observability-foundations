@@ -39,6 +39,10 @@ The locations and deployment guides are listed below. You will need to deploy  t
 
 This project, while made available on GitHub as Open Source, limits community contributions. It is maintained by [a11smiles](https://github.com/a11smiles) as a resource for Microsoft CSAs and partners to use for delivering conversations regarding observability with Azure Monitor and Grafana. While you may wish to contribute, not all PRs will be honored. Please discuss prior to spending effort. You may wish to consider opening an Issue instead.
 
+## Copyright
+
+All content in this repository has been developed by Joshua Davis and is Copyrighted &copy; 2023 by [Missional, Inc.](https://missional.dev). All rights reserved. It is [licensed](./LICENSE) under MIT for use by Microsoft and its partners. Microsoft, Azure, and respective products are registered trademarks of Microsoft. However, all content remains the intellectual property of Joshua Davis and Missional, Inc.
+
 ## Warranty
 
 There is no warranty, written or implied, or official support for the artifacts contained herein. Use at your own discretion.
